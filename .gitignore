@@ -29,4 +29,5 @@ phpcs.xml
 *.sass-cache
 *.lock
 *.sublime-project
+*.sublime-workspace
 cache
