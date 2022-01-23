@@ -43,6 +43,7 @@ final class Plugin {
 				plugin_dir_path( DEKODE_GUTENBERG_BLOCKS_PLUGIN_FILE )  // phpcs:disable ImportDetection.Imports.RequireImports.Symbol -- this constant is global
 			),
 			'plugin_template_folder' => 'templates',
+			'plugin_blocks_folder'   => 'blocks',
 			'ext_template_folder'    => 'the-plugin-name-templates',
 			/**
 			 * Add extra data here
@@ -117,6 +118,26 @@ final class Plugin {
 	 */
 	public function extTemplateFolder(): string {
 		return $this->data()['ext_template_folder'];
+	}
+
+	/**
+	 * Get the plugin internal blocks path
+	 *
+	 * @return string
+	 * @since 1.0.0
+	 */
+	public function blocksPath(): string {
+		return $this->data()['plugin_path'] . '/' . $this->data()['plugin_blocks_folder'];
+	}
+
+	/**
+	 * Get the plugin internal blocks folder name
+	 *
+	 * @return string
+	 * @since 1.0.0
+	 */
+	public function blocksFolder(): string {
+		return $this->data()['plugin_blocks_folder'];
 	}
 
 	/**
