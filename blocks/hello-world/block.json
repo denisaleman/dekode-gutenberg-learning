@@ -1,0 +1,27 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "dekode-gutenberg-blocks/hello-world",
+	"title": "Hello World",
+	"textdomain": "gutenberg-examples",
+	"icon": "smiley",
+	"category": "layout",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		},
+		"alignment": {
+			"type": "string",
+			"default": "none"
+		}
+	},
+	"example": {
+		"attributes": {
+			"content": "Hello world",
+			"alignment": "right"
+		}
+	},
+	"editorScript": "file:./build/index.js"
+}
