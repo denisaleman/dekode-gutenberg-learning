@@ -51,6 +51,10 @@ class Blocks extends Base {
 					'id'              => 'hello-world',
 					'metadata_path'   => $this->plugin->blocksPath() . '/' . 'hello-world',
 				],
+				[
+					'id'              => 'register-block',
+					'metadata_path'   => $this->plugin->blocksPath() . '/' . 'red-block',
+				],
 			] as $block ) {
 
 			register_block_type( $block['metadata_path'] );
